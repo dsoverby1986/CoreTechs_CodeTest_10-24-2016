@@ -22,3 +22,15 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#ddl_grid_Container {
+    margin-top: 100px;
+}
+
+#grid_Cars {
+    margin-top: 30px;
+}
+
+#col_CreateNewLnk {
+    padding-top: 30px;
+}

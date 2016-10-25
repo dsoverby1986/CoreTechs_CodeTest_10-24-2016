@@ -77,6 +77,8 @@ c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_1
 c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\bin\Microsoft.Owin.Security.Google.xml
 c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\obj\Debug\CoreTechs_CodeTest_10-24-2016.csprojResolveAssemblyReference.cache
 c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\obj\Debug\CoreTechs_CodeTest_10-24-2016.dll
 c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\obj\Debug\CoreTechs_CodeTest_10-24-2016.pdb
+c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\bin\PagedList.dll
+c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\bin\PagedList.xml
+c:\users\dsoverby1986\documents\visual studio 2015\Projects\CoreTechs_CodeTest_10-24-2016\CoreTechs_CodeTest_10-24-2016\bin\MvcPaging.dll
