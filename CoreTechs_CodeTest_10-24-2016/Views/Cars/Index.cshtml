@@ -1,0 +1,136 @@
+﻿@using MvcPaging;
+@using CoreTechs_CodeTest_10_24_2016.Models;
+@model CarsIndexViewModel
+
+@{
+    ViewBag.Title = "CoreTechs Code Test";
+}
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1" id="ddl_grid_Container">
+        <div class="row">
+            @using (Html.BeginForm("GetCars", "Cars", FormMethod.Get, htmlAttributes: new { id = "form_CarOptions" }))
+            {
+                <div class="col-sm-3" id="col_MakesListContainer">
+                    @{ Html.RenderPartial("_MakesDropDownList", Model.Makes); }
+                </div>
+                <div class="col-sm-3" id="col_ModelsListContainer">
+                    @{ Html.RenderPartial("_ModelsDropDownList", Model.Models);}
+                </div>
+                <div class="col-sm-3">
+                    <label class="control-label" for="search">Search</label>
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Search" />
+                </div>
+                <div class="col-sm-3" id="col_CreateNewLnk">
+                    <a href="@(Url.Action("Create", "Cars"))">Create New Car</a>
+                </div>
+            }
+        </div>
+        <div class="row" id="grid_Cars">
+            @{ Html.RenderPartial("_CarsGrid", Model.GridModel); }
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+    $(function () {
+        $('body').on('change', '#ddl_Makes', function () {
+            if ($('#search').val() !== '')
+                $('#search').val('');
+            var make = $('option:selected', this).val();
+            var params = { make: make };
+            GetCarsGrid(params);
+            UpdateModels(params);
+        });
+
+        $('body').on('change', '#ddl_Models', function () {
+            if ($('#search').val() !== '')
+                $('#search').val('');
+            var make = $('#ddl_Makes option:selected').val();
+            var model = $('option:selected', this).val();
+            var params = { make: make, model: model };
+            GetCarsGrid(params);
+        });
+
+        $('body').on('keyup', '#search', function () {
+            $('#ddl_Makes').val('');
+            $('#ddl_Models').find('option:gt(0)').remove();
+            var term = $(this).val();
+            var params = { term: term };
+            var encParams = $.param(params);
+            $.ajax({
+                type: 'GET',
+                url: '@(Url.Action("SearchCars", "Cars"))',
+                data: encParams,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'html',
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('jqXHR', jqXHR);
+                    console.log('textStatus', textStatus);
+                    console.log('errorThrown', errorThrown);
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $('#grid_Cars').html(data);
+                    GetMakes(encParams);
+                }
+            });
+        });
+
+        function GetMakes(encParams) {
+            $.ajax({
+                type: 'GET',
+                url: '@(Url.Action("GetMakes", "Cars"))',
+                data: encParams,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'html',
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('jqXHR', jqXHR);
+                    console.log('textStatus', textStatus);
+                    console.log('errorThrown', errorThrown);
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $('#col_MakesListContainer').html(data);
+                }
+            });
+        }
+
+        function GetCarsGrid(params) {
+            var encParams = $.param(params);
+            $.ajax({
+                type: 'GET',
+                url: '@(Url.Action("GetNextCars", "Cars"))',
+                data: encParams,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'html',
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('jqXHR', jqXHR);
+                    console.log('textStatus', textStatus);
+                    console.log('errorThrown', errorThrown);
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $('#grid_Cars').html(data);
+                }
+            });
+        }
+
+        function UpdateModels(params) {
+            var encParams = $.param(params);
+            $.ajax({
+                type: 'GET',
+                url: '@(Url.Action("GetModels", "Cars"))',
+                data: encParams,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'html',
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('jqXHR', jqXHR);
+                    console.log('textStatus', textStatus);
+                    console.log('errorThrown', errorThrown);
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $('#col_ModelsListContainer').html(data);
+                }
+            });
+        }
+    });
+    </script>
+}

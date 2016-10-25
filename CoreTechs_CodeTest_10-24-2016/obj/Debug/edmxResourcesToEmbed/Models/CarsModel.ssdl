@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HCL2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="make" Type="nvarchar" MaxLength="50" />
+    <Property Name="model_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="model_trim" Type="nvarchar" MaxLength="128" />
+    <Property Name="model_year" Type="nvarchar" MaxLength="10" />
+    <Property Name="body_style" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_position" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_cc" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_num_cyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_valves_per_cyl" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_power_ps" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_power_rpm" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_torque_nm" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_torque_rpm" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_bore_mm" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_stroke_mm" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_compression" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_fuel" Type="nvarchar" MaxLength="50" />
+    <Property Name="top_speed_kph" Type="nvarchar" MaxLength="50" />
+    <Property Name="zero_to_100_kph" Type="nvarchar" MaxLength="50" />
+    <Property Name="drive_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="transmission_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="seats" Type="nvarchar" MaxLength="50" />
+    <Property Name="doors" Type="nvarchar" MaxLength="50" />
+    <Property Name="weight_kg" Type="nvarchar" MaxLength="50" />
+    <Property Name="length_mm" Type="nvarchar" MaxLength="50" />
+    <Property Name="width_mm" Type="nvarchar" MaxLength="50" />
+    <Property Name="height_mm" Type="nvarchar" MaxLength="50" />
+    <Property Name="wheelbase" Type="nvarchar" MaxLength="50" />
+    <Property Name="lkm_hwy" Type="nvarchar" MaxLength="50" />
+    <Property Name="lkm_mixed" Type="nvarchar" MaxLength="50" />
+    <Property Name="lkm_city" Type="nvarchar" MaxLength="50" />
+    <Property Name="fuel_capacity_l" Type="nvarchar" MaxLength="50" />
+    <Property Name="sold_in_us" Type="nvarchar" MaxLength="50" />
+    <Property Name="co2" Type="nvarchar" MaxLength="50" />
+    <Property Name="make_display" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="HCL2ModelStoreContainer">
+    <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

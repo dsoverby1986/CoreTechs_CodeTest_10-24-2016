@@ -1,0 +1,9 @@
+﻿@model List<SelectListItem>
+    <label class="control-label" for="makes">Makes</label>
+<select id="ddl_Makes" class="form-control" name="makes">
+    <option value="">--Select A Make--</option>
+    @foreach (SelectListItem item in Model)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+</select>

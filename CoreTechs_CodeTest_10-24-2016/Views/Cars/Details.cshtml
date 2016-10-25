@@ -1,0 +1,306 @@
+﻿@model CoreTechs_CodeTest_10_24_2016.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model_trim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model_trim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model_year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model_year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.body_style)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.body_style)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_cc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_cc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_num_cyl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_num_cyl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_valves_per_cyl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_valves_per_cyl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_power_ps)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_power_ps)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_power_rpm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_power_rpm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_torque_nm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_torque_nm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_torque_rpm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_torque_rpm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_bore_mm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_bore_mm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_stroke_mm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_stroke_mm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_compression)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_compression)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_fuel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_fuel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.top_speed_kph)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.top_speed_kph)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zero_to_100_kph)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zero_to_100_kph)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.drive_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drive_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.transmission_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transmission_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weight_kg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weight_kg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.length_mm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.length_mm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.width_mm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.width_mm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.height_mm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.height_mm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.wheelbase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.wheelbase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkm_hwy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkm_hwy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkm_mixed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkm_mixed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkm_city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkm_city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fuel_capacity_l)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fuel_capacity_l)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sold_in_us)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sold_in_us)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.co2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.co2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.make_display)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.make_display)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

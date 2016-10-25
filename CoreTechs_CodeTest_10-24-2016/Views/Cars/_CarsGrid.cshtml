@@ -1,0 +1,61 @@
+﻿@using MvcPaging;
+@using CoreTechs_CodeTest_10_24_2016.Models;
+@model CarGridViewModel
+<div class="col-sm-12 table-responsive">
+    <table class="table table-bordered table-hover table-striped" id="table_Cars">
+        <thead>
+            <tr>
+                <th>
+                    Make
+                </th>
+                <th>
+                    Model
+                </th>
+                <th>
+                    Year
+                </th>
+                <th>
+                    Trim
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Car car in Model.Cars)
+            {
+                <tr>
+                    <td>
+                        @car.make
+                    </td>
+                    <td>
+                        @car.model_name
+                    </td>
+                    <td>
+                        @car.model_year
+                    </td>
+                    <td>
+                        @car.model_trim
+                    </td>
+                    <td>
+                        <a href="@(Url.Action("Edit", "Cars", new { id = car.id }))">Edit</a><span> | </span>
+                        <a href="@(Url.Action("Delete", "Cars", new { id = car.id }))">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        @Html.Pager(Model.Cars.PageSize, Model.Cars.PageNumber, Model.Cars.TotalItemCount, new AjaxOptions { UpdateTargetId = "grid_Cars" }).Options(o => o
+          .Action("GetNextCars")
+          .DisplayTemplate("Bootstrap3Pagination")
+          .MaxNrOfPages(8)
+          .AlwaysAddFirstPageNumber()
+          .AddRouteValue("make", Model.Make)
+          .AddRouteValue("model", Model.Model)
+          .AddRouteValue("term", Model.Term))
+    </div>
+</div>
