@@ -11,13 +11,17 @@ namespace CoreTechs_CodeTest_10_24_2016.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Car
     {
         public int id { get; set; }
+        [MaxLength(50, ErrorMessage = "Car Make cannot exceed 50 characters")]
         public string make { get; set; }
+        [MaxLength(50, ErrorMessage = "Car Model cannot exceed 50 characters")]
         public string model_name { get; set; }
+        [MaxLength(128, ErrorMessage = "Car Trim cannot exceed 128 digits")]
         public string model_trim { get; set; }
+        [MaxLength(4, ErrorMessage = "Car Year cannot exceed 4 digits")]
         public string model_year { get; set; }
         public string body_style { get; set; }
         public string engine_position { get; set; }
